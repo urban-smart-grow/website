@@ -1,4 +1,4 @@
-const Logo = require('./components/Logo')
+import { Logo } from './components/Logo'
 
 // theme.config.js
 export default {

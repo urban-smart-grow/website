@@ -1,3 +1,5 @@
+const Logo = require('./components/Logo')
+
 // theme.config.js
 export default {
   projectLink: 'https://github.com/urban-smart-grow/website', // GitHub link in the navbar
@@ -11,7 +13,7 @@ export default {
   footer: true,
   footerText: `MIT ${new Date().getFullYear()}.`,
   footerEditLink: `Edit this page on GitHub`,
-  logo: null,
+  logo: <Logo />,
   head: (
     <>
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />

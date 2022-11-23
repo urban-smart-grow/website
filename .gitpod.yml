@@ -1,0 +1,5 @@
+vscode:
+  extensions:
+    - dbaeumer.vscode-eslint
+    - esbenp.prettier-vscode
+    - patbenatar.advanced-new-file

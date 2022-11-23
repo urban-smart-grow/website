@@ -1,14 +1,13 @@
 import { Logo } from './components/Logo'
 
-// theme.config.js
-export default {
-  projectLink: 'https://github.com/urban-smart-grow/website', // GitHub link in the navbar
-  docsRepositoryBase: 'https://github.com/shuding/nextra/blob/master', // base URL for the docs repository
+const themeConfig = {
+  projectLink: 'https://github.com/urban-smart-grow/website',
+  docsRepositoryBase: 'https://github.com/shuding/nextra/blob/master',
   titleSuffix: '',
   nextLinks: true,
   prevLinks: true,
   search: true,
-  customSearch: null, // customizable, you can use algolia for example
+  customSearch: null,
   darkMode: true,
   footer: true,
   footerText: `MIT ${new Date().getFullYear()}.`,
@@ -22,3 +21,5 @@ export default {
     </>
   ),
 }
+
+export default themeConfig

@@ -3,3 +3,19 @@ vscode:
     - dbaeumer.vscode-eslint
     - esbenp.prettier-vscode
     - patbenatar.advanced-new-file
+
+tasks:
+  - name: dev server
+    init: yarn
+    command: yarn dev
+    openIn: bottom
+
+ports:
+  - port: 3000
+    name: dev server
+    visibility: private
+    onOpen: open-preview
+
+github:
+  prebuilds:
+    master: true

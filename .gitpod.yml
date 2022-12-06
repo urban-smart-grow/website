@@ -5,6 +5,8 @@ vscode:
     - patbenatar.advanced-new-file
 
 tasks:
+  - name: open Readme.md
+    command: gp open README.md && exit
   - name: dev server
     init: yarn
     command: yarn dev

@@ -2,7 +2,7 @@ import { Logo } from './components/Logo'
 
 const themeConfig = {
   projectLink: 'https://github.com/urban-smart-grow/website',
-  docsRepositoryBase: 'https://github.com/shuding/nextra/blob/master',
+  docsRepositoryBase: 'https://github.com/urban-smart-grow/website',
   titleSuffix: '',
   nextLinks: true,
   prevLinks: true,

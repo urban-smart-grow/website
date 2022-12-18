@@ -12,7 +12,12 @@ const themeConfig = {
   footer: true,
   footerText: `MIT ${new Date().getFullYear()}.`,
   footerEditLink: `Edit this page on GitHub`,
-  logo: <Logo />,
+  logo: (
+    <>
+      <Logo />
+      <span className='ml-2'>Urban Smart Grow</span>
+    </>
+  ),
   head: (
     <>
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />

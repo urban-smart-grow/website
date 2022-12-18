@@ -13,7 +13,7 @@ export const Logo = () => (
     </g>
     <g
       stroke='black'
-      fill-opacity='0'
+      fillOpacity='0'
       strokeLinejoin='round'
       strokeLinecap='round'
       strokeWidth='0.5'>

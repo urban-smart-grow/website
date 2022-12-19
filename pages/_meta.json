@@ -2,7 +2,6 @@
   "index": "Home",
   "aerotower": "AeroTower",
   "snippets": {
-    "type": "page",
     "display": "hidden"
   }
 }

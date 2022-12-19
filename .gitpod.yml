@@ -3,6 +3,7 @@ vscode:
     - dbaeumer.vscode-eslint
     - esbenp.prettier-vscode
     - patbenatar.advanced-new-file
+    - unifiedjs.vscode-mdx
 
 tasks:
   - name: open Readme.md
@@ -16,7 +17,7 @@ ports:
   - port: 3000
     name: dev server
     visibility: private
-    onOpen: open-preview
+    onOpen: notify
 
 github:
   prebuilds:

@@ -1,18 +1,15 @@
 import { Logo } from './components/Logo'
 
 const themeConfig = {
-  projectLink: 'https://github.com/urban-smart-grow/website',
-  docsRepositoryBase: 'https://github.com/shuding/nextra/blob/master',
+  docsRepositoryBase: 'https://github.com/urban-smart-grow/website',
   titleSuffix: '',
-  nextLinks: true,
-  prevLinks: true,
-  search: true,
-  customSearch: null,
   darkMode: true,
-  footer: true,
-  footerText: `MIT ${new Date().getFullYear()}.`,
-  footerEditLink: `Edit this page on GitHub`,
-  logo: <Logo />,
+  logo: (
+    <>
+      <Logo />
+      <span className='ml-2'>Urban Smart Grow</span>
+    </>
+  ),
   head: (
     <>
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />

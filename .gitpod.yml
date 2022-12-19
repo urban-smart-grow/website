@@ -3,6 +3,7 @@ vscode:
     - dbaeumer.vscode-eslint
     - esbenp.prettier-vscode
     - patbenatar.advanced-new-file
+    - unifiedjs.vscode-mdx
 
 tasks:
   - name: open Readme.md

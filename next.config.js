@@ -2,15 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  basePath: '/website',
-  redirects: async () => [
-    {
-      source: '/',
-      destination: '/website',
-      basePath: false,
-      permanent: false,
-    },
-  ],
+  basePath: '/website'
 }
 
 const withNextra = require('nextra')({

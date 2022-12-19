@@ -2,7 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  basePath: '/website'
+  basePath: '/website',
+  images: {
+    unoptimized: true,
+  },
 }
 
 const withNextra = require('nextra')({

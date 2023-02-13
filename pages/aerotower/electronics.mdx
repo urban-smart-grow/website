@@ -1,4 +1,5 @@
 import Code from '../../snippets/AeroTowerControllerCode.mdx'
+import { Callout } from 'nextra-theme-docs'
 
 # AeroTower Electronics
 
@@ -17,25 +18,107 @@ The circuit of the tower is based on ordinary breadboards to be easily extendabl
 - [Cotton Sticks](https://amzn.eu/d/0gSTmLu)
 - [3x4 mm silicone tube](https://www.ebay.de/itm/263190368164), length depending on your towers height
 
+## Code
+
+First, you need to [install CicuitPython onto the Seeed XIAO](https://wiki.seeedstudio.com/Seeeduino-XIAO-CircuitPython/).
+
+Afterwards, create a file named `code.py` in the root folder of the device and add the following code:
+
+<Code />
+
 ## Assembly
 
+Once you have loaded the code onto the XIAO, connect it to the pin headers found in the XIAO packaging. You can optionally solder them to ensure better hold.
+
+### Seeed XIAO
+
 ![](../../public/aerotower/PXL_20230210_174916842.jpg)
+
+Take the breadboard and place it so you look at it with the red line pointing torwards you. Put the microcontroller on the right side, facing the usb c port outwards.
+
 ![](../../public/aerotower/PXL_20230210_175241967.jpg)
+
+### Pump (Preparation)
+
+Now get a transistor (IRFZ44N) and two jumper wires. Connect the first jumper wire with the third pin from the left of the xiao ([pin 9](https://wiki.seeedstudio.com/Seeeduino-XIAO/#hardware-overview)).
+Put the transistor into place, such that the right pin of it connects to the other end of the first jumper wire.
+Then, connect the left pin of the transistor to ground.
+
+<Callout type='warning' emoji='⚠'>
+  Pay attention to the orientation of the transistor.
+</Callout>
+
 ![](../../public/aerotower/PXL_20230210_181033127.jpg)
+
+You can bend the transistor over to get it out of the way.
+Next, add the 10k Ohm resistor connecting the outer pins of the transistor.
+This is needed to let the transistor be turned off by the microcontroller properly.
+
 ![](../../public/aerotower/PXL_20230210_181135501.jpg)
+
+Trim the resistors wires and keep the cutoffs. Then add the [flyback diode](https://en.wikipedia.org/wiki/Flyback_diode), oriented like in the picture. It should be connected to the middle pin of the transistor and the power rail.
+
 ![](../../public/aerotower/PXL_20230210_181334972.jpg)
-![](../../public/aerotower/PXL_20230210_181604022.jpg)
-![](../../public/aerotower/PXL_20230210_181705483.MP.jpg)
+
+Again, cut off the excess wires and keep them for later.
+
+Add two more jumper wires, one connecting to the middle of the transistor pin and one connecting to the power rail. Both wires should also connect to two neighbouring columns. These columns will be used to connect the pump.
+
 ![](../../public/aerotower/PXL_20230210_181930728.jpg)
+
+You can compare your assembly with the picture below.
+
 ![](../../public/aerotower/PXL_20230210_181946522.jpg)
+
+### Atomizer (Preparation)
+
+Take the cutoffs, the grove connector cable and the seeed water atomization module.
+
 ![](../../public/aerotower/PXL_20230210_182037363.MP.jpg)
+
+Plug the wires into one end of the connector cable. These are used to stick the cable into the breadboard.
+
 ![](../../public/aerotower/PXL_20230210_182358002.jpg)
+
+Put the prepared grove cable on the left side of the breadboard.
+Connect the yellow cable to [pin 8](https://wiki.seeedstudio.com/Seeeduino-XIAO/#hardware-overview). Then connect the red and black cable to power and ground rails.
+
+<Callout type='error' emoji='️🚫'>
+  <p>During taking of the pictures, an error happened:</p>
+  <p>The left most cables connecting power and ground are reversed.</p>
+</Callout>
+
 ![](../../public/aerotower/PXL_20230210_182612659.jpg)
+
+Again, you can compare your board to the picture below.
+
 ![](../../public/aerotower/PXL_20230210_182702211.MP.jpg)
+
+### Finishing the assembly
+
+Now, take the prepared breadboard, the atomizer module and the pump with two jumper wires.
+
 ![](../../public/aerotower/PXL_20230210_183112363.jpg)
+
+Connect the jumper wires to the pump of the pins.
+You do not need to solder them, it is sufficient to bend them like in the picture below.
+
+<Callout type='warning' emoji='⚠'>
+  Be very careful with the pump, as it can easily break.
+</Callout>
+
 ![](../../public/aerotower/PXL_20230210_183130331.jpg)
+
+Connect the other sides of the jumper wires to the according wires like [described above](#pump-preparation). It does not matter which cable is connected to ground or power.
+
 ![](../../public/aerotower/PXL_20230210_183232261.MP.jpg)
+
+Lastly, connect the grove cable to the grove connector on the module.
+
 ![](../../public/aerotower/PXL_20230210_183249546.jpg)
+
+### Mounting the electronics into the tower
+
 ![](../../public/aerotower/PXL_20230210_183354810.jpg)
 ![](../../public/aerotower/PXL_20230210_183359147.MP.jpg)
 ![](../../public/aerotower/PXL_20230210_183518938.jpg)
@@ -52,19 +135,5 @@ The circuit of the tower is based on ordinary breadboards to be easily extendabl
 ![](../../public/aerotower/PXL_20230210_184130210.jpg)
 ![](../../public/aerotower/PXL_20230210_184151741.jpg)
 ![](../../public/aerotower/PXL_20230210_184200119.jpg)
-
-### Seeed XIAO
-
-### Connect the Pump
-
-### Add the Atomizer
-
-## Code
-
-First, you need to [install CicuitPython onto the Seeed XIAO](https://wiki.seeedstudio.com/Seeeduino-XIAO-CircuitPython/).
-
-Afterwards, create a file named `code.py` in the root folder of the device and add the following code:
-
-<Code />
 
 ## Mounting Everything into the tower

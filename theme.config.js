@@ -1,7 +1,7 @@
 import { Logo } from './components/Logo'
 
 const themeConfig = {
-  docsRepositoryBase: 'https://github.com/urban-smart-grow/website',
+  docsRepositoryBase: 'https://github.com/urban-smart-grow/website/tree/main',
   titleSuffix: '',
   darkMode: true,
   logo: (

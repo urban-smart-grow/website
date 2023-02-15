@@ -37,7 +37,7 @@ Connect the Seeed XIAO microcontroller to the pin headers found in the packaging
 
 ![](../../public/aerotower/PXL_20230210_174916842.jpg)
 
-Take the breadboard and place it so you look at it with the red line pointing torwards you. Put the microcontroller on the right side, facing the usb c port outwards.
+Take the breadboard and place it so you look at it with the red line pointing torwards you. Put the microcontroller on the right side, facing the USB c port outwards.
 
 ![](../../public/aerotower/PXL_20230210_175241967.jpg)
 
@@ -46,7 +46,8 @@ Then, connect the 5 volt and ground pins to the power and ground rails of the br
 <Callout type='error' emoji='️🚫'>
   <p>During picture taking an error happened:</p>
   <p>
-    These two wires are not present on the following picutures, because it was not noticed early enough that they are missing.
+    These two wires are not present on the following picutures, because it was
+    not noticed early enough that they are missing.
   </p>
 </Callout>
 
@@ -128,24 +129,89 @@ Connect the other sides of the jumper wires to the according wires like [describ
 ![](../../public/aerotower/PXL_20230210_183232261.MP.jpg)
 
 Lastly, connect the grove cable to the grove connector on the module.
+Your breadboard should look like in the picture below.
 
 ![](../../public/aerotower/PXL_20230210_183249546.jpg)
 
 ### Mounting the electronics into the tower
 
-![](../../public/aerotower/PXL_20230210_183354810.jpg)
+To put the circuitry to action, you first need to mount it into the tower.
+
+Take the [electronics case](https://github.com/urban-smart-grow/AeroTower/blob/main/exports/head_electronics_case.stl) and the breadboard. Lay the breadboard into the case, such that the XIAO's USB port points to the cutout on the side.
+You can also use the tape on the bottom of the breadboard and mount it permanently into the case.
+
 ![](../../public/aerotower/PXL_20230210_183359147.MP.jpg)
+
+For the next step you will need:
+
+- the [electronics case](https://github.com/urban-smart-grow/AeroTower/blob/main/exports/head_electronics_case.stl) with assembled breadboard
+- a cotton stick
+- a piezo disk (this comes with the atomizer module)
+- one [head tank](https://github.com/urban-smart-grow/AeroTower/blob/main/exports/head_tank.stl)
+- one [head mount](https://github.com/urban-smart-grow/AeroTower/blob/main/exports/head_mount.stl)
+
 ![](../../public/aerotower/PXL_20230210_183518938.jpg)
+
+slide the cotton stick through the hole of the head tank, until it touches the other end and cannot be pushed further. There is a cutout to guide you.
+
 ![](../../public/aerotower/PXL_20230210_183537655.jpg)
+
+Cut off the overhanging part of the cotton stick, so that the piezo disk can fit in.
+Take the piezo with the solder joints facing outwards and slide it into the slot.
+The cotton stick should touch the piezo, to lead the water to it.
+
+<Callout type='warning' emoji='⚠'>
+  Be very careful with the piezo, as the cables can easily break of the disk.
+</Callout>
+
 ![](../../public/aerotower/PXL_20230210_183618093.jpg)
+
+Mount the tank into the head mount and push it down, until it fits completely.
+
+It is helpful to place the head mount onto a box (like the [electronics lid](https://github.com/urban-smart-grow/AeroTower/blob/main/exports/head_electronics_lid.stl)) to prevent the tank from being pushed out again.
+
 ![](../../public/aerotower/PXL_20230210_183640020.MP.jpg)
+
+Next, slide the electronics case into its slot. The atomizer module should be placed on the same side as the piezo cable.
+Be careful to fit the cables into the small cutouts on the mount and electronics case.
+
 ![](../../public/aerotower/PXL_20230210_183701839.jpg)
+
+It should look like this.
+
 ![](../../public/aerotower/PXL_20230210_183723801.jpg)
+
+Now take the tube and turn the head mount to see the pump section.
+
 ![](../../public/aerotower/PXL_20230210_183832827.jpg)
+
+Stick the tube through the bottom hole of the tank.
+
 ![](../../public/aerotower/PXL_20230210_183932154.jpg)
+
+Connect the tube with the outer pin, which is the water intake.
+The pin at the center is the water outlet, respectively.
+
 ![](../../public/aerotower/PXL_20230210_183953595.jpg)
+
+Push back the pump with the tube so that the pump fits into the cutout completely.
+
 ![](../../public/aerotower/PXL_20230210_184024079.jpg)
+
+Connect the piezo cable with the socket on the atomizer module.
+
 ![](../../public/aerotower/PXL_20230210_184107975.jpg)
+
+Lastly, you can cover the electronics with the [lid](https://github.com/urban-smart-grow/AeroTower/blob/main/exports/head_electronics_lid.stl).
+
 ![](../../public/aerotower/PXL_20230210_184130210.jpg)
-![](../../public/aerotower/PXL_20230210_184151741.jpg)
+
+The USB port should still be visible, allowing you to power the device with any USB power adapter. Alternatively, you can use a solar power bank to place the whole tower outside and make it self sufficient.
+
 ![](../../public/aerotower/PXL_20230210_184200119.jpg)
+
+## Congratulations!!
+
+You have built the electronics of the AeroTower. Now you can mount the head into the rest of the tower and test your setup.
+
+Happy growing!

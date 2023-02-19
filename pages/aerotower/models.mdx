@@ -1,5 +1,8 @@
 import Head from 'next/head'
-import { ModelViewer } from '../../components/ModelViewer'
+import {
+  ModelViewer,
+  defaultPrintInstructions,
+} from '../../components/ModelViewer'
 import { BreakingChangeAlert } from '../../components/BreakingChangeAlert'
 
 <Head>
@@ -17,41 +20,78 @@ The only special part is the [water tank](#tower-tank), which needs to be printe
 
 This is the main module of the tower. You can print this model multiple times and stack them together.
 
-<ModelViewer url='https://raw.githubusercontent.com/urban-smart-grow/AeroTower/main/exports/body.stl' />
+<ModelViewer
+  showDownloadLink
+  url='https://raw.githubusercontent.com/urban-smart-grow/AeroTower/main/exports/body.stl'
+  printInstructions={defaultPrintInstructions}
+/>
 
 ## Plant Cup
 
 These cups are designed to contain the plants from seed to harvest.
 Five cups can be mounted into one tower module.
 
-<ModelViewer url='https://raw.githubusercontent.com/urban-smart-grow/AeroTower/main/exports/plant_cup.stl' />
+<ModelViewer
+  showDownloadLink
+  url='https://raw.githubusercontent.com/urban-smart-grow/AeroTower/main/exports/plant_cup.stl'
+  printInstructions={defaultPrintInstructions}
+/>
 
 ## Tower Tank
 
 Please make sure this part is watertight. You can refer to [this article](https://help.prusa3d.com/article/watertight-prints_112324) to configure your printer accordingly.
 
-<ModelViewer url='https://raw.githubusercontent.com/urban-smart-grow/AeroTower/main/exports/tank.stl' />
+<ModelViewer
+  showDownloadLink
+  url='https://raw.githubusercontent.com/urban-smart-grow/AeroTower/main/exports/tank.stl'
+  printInstructions={{
+    ...defaultPrintInstructions,
+    'Layer Height': '0.2mm',
+    'Perimeters': 4,
+    'Additional Instructions': 'see link above',
+  }}
+/>
 
 ## Tower Tank Adapter
 
 Bridging between tank and tower module.
 
-<ModelViewer url='https://raw.githubusercontent.com/urban-smart-grow/AeroTower/main/exports/tank_adapter.stl' />
+<ModelViewer
+  showDownloadLink
+  url='https://raw.githubusercontent.com/urban-smart-grow/AeroTower/main/exports/tank_adapter.stl'
+  printInstructions={defaultPrintInstructions}
+/>
 
 ## Tower Head
 
 ### Mount
 
-<ModelViewer url='https://raw.githubusercontent.com/urban-smart-grow/AeroTower/main/exports/head_mount.stl' />
+<ModelViewer
+  showDownloadLink
+  url='https://raw.githubusercontent.com/urban-smart-grow/AeroTower/main/exports/head_mount.stl'
+  printInstructions={defaultPrintInstructions}
+/>
 
 ### Head Tank
 
-<ModelViewer url='https://raw.githubusercontent.com/urban-smart-grow/AeroTower/main/exports/head_tank.stl' />
+<ModelViewer
+  showDownloadLink
+  url='https://raw.githubusercontent.com/urban-smart-grow/AeroTower/main/exports/head_tank.stl'
+  printInstructions={defaultPrintInstructions}
+/>
 
 ### Electronics Case
 
-<ModelViewer url='https://raw.githubusercontent.com/urban-smart-grow/AeroTower/main/exports/head_electronics_case.stl' />
+<ModelViewer
+  showDownloadLink
+  url='https://raw.githubusercontent.com/urban-smart-grow/AeroTower/main/exports/head_electronics_case.stl'
+  printInstructions={defaultPrintInstructions}
+/>
 
 ### Electronics Lid
 
-<ModelViewer url='https://raw.githubusercontent.com/urban-smart-grow/AeroTower/main/exports/head_electronics_lid.stl' />
+<ModelViewer
+  showDownloadLink
+  url='https://raw.githubusercontent.com/urban-smart-grow/AeroTower/main/exports/head_electronics_lid.stl'
+  printInstructions={defaultPrintInstructions}
+/>

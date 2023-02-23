@@ -17,7 +17,40 @@ In its final form, the AeroTower should be completly **open source** (model, ele
 
 Below, you can see a rendering of the assembled model:
 
-<ModelViewer url='https://raw.githubusercontent.com/urban-smart-grow/AeroTower/main/exports/assembly.stl' />
+<div style={{display: 'flex', flexWrap: 'wrap'}}>
+  <ModelViewer
+    style={{
+      flexBasis: '200px',
+      flex: 1,
+      width: '100%',
+      height: '400px',
+      top: 0,
+      left: 0,
+    }}
+    url='https://raw.githubusercontent.com/urban-smart-grow/AeroTower/main/exports/assembly.stl'
+  />
+
+  <ModelViewer
+    style={{
+      flexBasis: '200px',
+      flex: 1,
+      width: '100%',
+      height: '400px',
+      top: 0,
+      left: 0,
+    }}
+    modelProps={{
+      color: 'teal',
+      positionX: 300,
+      positionY: 300,
+    }}
+    floorProps={{
+      gridLength: 600,
+      gridWidth: 600,
+    }}
+    url='https://raw.githubusercontent.com/urban-smart-grow/AeroTower/main/exports/explosion.stl'
+  />
+</div>
 
 ## Vertical Farming
 

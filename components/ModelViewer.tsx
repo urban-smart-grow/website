@@ -1,13 +1,13 @@
 import Link from 'next/link'
 import { FC } from 'react'
-import { StlViewer } from 'react-stl-viewer'
+import { StlViewer, StlViewerProps } from 'react-stl-viewer'
 import { RecordTable } from './RecordTable'
 
 type Props = {
   url: string
   showDownloadLink?: boolean
   printInstructions?: Record<string, string>
-}
+} & Partial<StlViewerProps>
 
 export const defaultPrintInstructions = {
   'Nozzle Size': '0.4mm',
@@ -22,6 +22,7 @@ export const ModelViewer: FC<Props> = ({
   url,
   showDownloadLink,
   printInstructions,
+  ...props
 }) => (
   <>
     <StlViewer
@@ -43,6 +44,7 @@ export const ModelViewer: FC<Props> = ({
       orbitControls
       shadows
       url={url}
+      {...props}
     />
     <div className='flex justify-evenly'>
       {printInstructions && (

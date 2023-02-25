@@ -1,6 +1,4 @@
 ```python
-# /code.py
-
 import time
 import board
 from digitalio import DigitalInOut, Direction
@@ -19,9 +17,11 @@ atomizer.direction = Direction.OUTPUT
 fog_interval = 60
 fog_pause = fog_interval + 60 * 3
 
+signal_interval = 10
+signal_length = 0.4
+
 delays = dict()
 workers = dict()
-
 
 def set_interval(delay, callback, key):
     def execute():
@@ -64,10 +64,13 @@ def turn_atomizer_on(duration=fog_interval):
     atomizer.value = True
     set_timeout(duration, turn_atomizer_off, 'FOG_OFF')
 
+def send_signal_to_powerbank():
+    if not atomizer.value:
+        turn_atomizer_on(signal_length)
 
 set_interval(pump_pause, turn_pump_on_by_pwm, 'PUMP_ON')
 set_interval(fog_pause, turn_atomizer_on, 'FOG_ON')
-
+set_interval(signal_interval, send_signal_to_powerbank, 'SIGNAL')
 turn_pump_on_by_pwm(10)
 
 while True:

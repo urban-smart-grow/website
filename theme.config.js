@@ -1,8 +1,16 @@
+import { useRouter } from 'next/router'
 import { Logo } from './components/Logo'
 
 const themeConfig = {
   docsRepositoryBase: 'https://github.com/urban-smart-grow/website/tree/main',
-  titleSuffix: '',
+  useNextSeoProps: () => {
+    const { asPath } = useRouter()
+    if (asPath !== '/') {
+      return {
+        titleTemplate: '%s – Urban Smart Grow',
+      }
+    }
+  },
   darkMode: true,
   logo: (
     <>

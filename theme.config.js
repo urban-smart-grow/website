@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Logo } from './components/Logo'
 
@@ -25,6 +26,14 @@ const themeConfig = {
       <meta name='og:title' content='Urban Smart Grow' />
     </>
   ),
+  footer: {
+    text: (
+      <div className='flex space-x-2'>
+        <span>MIT {new Date().getFullYear()} © Urban Smart Grow</span>
+        <Link href='/impressum'>Impressum</Link>
+      </div>
+    ),
+  },
 }
 
 export default themeConfig

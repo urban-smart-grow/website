@@ -29,7 +29,15 @@ const themeConfig = {
   footer: {
     text: (
       <div className='flex space-x-2'>
-        <span>MIT {new Date().getFullYear()} © Urban Smart Grow</span>
+        <span>
+          MIT {new Date().getFullYear()} ©{' '}
+          <a
+            target='_blank'
+            href='https://github.com/urban-smart-grow'
+            rel='noreferrer'>
+            Urban Smart Grow
+          </a>
+        </span>
         <Link href='/impressum'>Impressum</Link>
       </div>
     ),

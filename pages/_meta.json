@@ -3,5 +3,8 @@
   "aerotower": "AeroTower",
   "snippets": {
     "display": "hidden"
+  },
+  "impressum": {
+    "display": "hidden"
   }
 }

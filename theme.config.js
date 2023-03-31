@@ -39,6 +39,9 @@ const themeConfig = {
           </a>
         </span>
         <Link href='/impressum'>Impressum</Link>
+        <Link href='https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement'>
+          Datenschutz
+        </Link>
       </div>
     ),
   },

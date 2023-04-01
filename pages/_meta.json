@@ -6,5 +6,8 @@
   },
   "impressum": {
     "display": "hidden"
+  },
+  "privacy": {
+    "display": "hidden"
   }
 }

@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Logo } from './components/Logo'
+import Link from 'next/link'
 
 const themeConfig = {
   docsRepositoryBase: 'https://github.com/urban-smart-grow/website/tree/main',
@@ -39,9 +39,7 @@ const themeConfig = {
           </a>
         </span>
         <Link href='/impressum'>Impressum</Link>
-        <Link href='https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement'>
-          Datenschutz
-        </Link>
+        <Link href='/privacy'>Datenschutz</Link>
       </div>
     ),
   },

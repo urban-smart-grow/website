@@ -6,9 +6,10 @@
 
 Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
 
-Name der Firma
 Malte Fillmer
+
 Leonardstr. 11
+
 33098 Paderborn
 
 Die verantwortliche Stelle entscheidet allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, Kontaktdaten o. Ä.).
